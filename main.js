@@ -6,7 +6,8 @@ const app = Vue.createApp ({
             description: 'Cool socks',
             image: './assets/images/socks_green.jpg',
             url: 'https://www.vuemastery.com/',
-            inventory: 100,
+            inStock: true,
+            // inventory: 100,
             onSale: true,
             details:['50% cotton', '30% wool', '20% polyester'],
             variants: [
@@ -26,6 +27,6 @@ const app = Vue.createApp ({
         },
         updateImage(variantImage) {
             this.image = variantImage;
-        }
+        },       
     }
 })
