@@ -2,12 +2,12 @@ const app = Vue.createApp ({
     data: function() {
         return {
             cart: 0,
+            brand: 'Vue Mastery',
             product: 'Socks',
             description: 'Cool socks',
             image: './assets/images/socks_green.jpg',
             url: 'https://www.vuemastery.com/',
-            inStock: true,
-            // inventory: 100,
+            inventory: 100,
             onSale: true,
             details:['50% cotton', '30% wool', '20% polyester'],
             variants: [
@@ -28,5 +28,13 @@ const app = Vue.createApp ({
         updateImage(variantImage) {
             this.image = variantImage;
         },       
+    },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product
+        },
+        isActive() {
+            return this.inventory > 0;
+        }
     }
 })
