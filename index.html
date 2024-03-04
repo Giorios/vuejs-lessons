@@ -13,11 +13,15 @@
       <div class="nav-bar"></div>
       <div class="cart">Cart({{ cart.length }})</div>
       <product-display :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeItem"></product-display>
+      <review-form></review-form>
   </div>
     <!-- Import App -->
     <script src="./main.js"></script>
     <!-- Import Components -->
     <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ProductDetails.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+
     <!-- Mount App -->
     <script>
       const mountedApp = app.mount('#app')
