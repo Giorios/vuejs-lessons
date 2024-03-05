@@ -180,3 +180,8 @@ ul {
     width: 90%;
   }
 }
+
+#rec {
+  max-width: 10%;
+  height: 20px;
+}
